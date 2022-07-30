@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | E-commerce product page</title>
 
@@ -16,29 +22,107 @@
 </head>
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <header>
+    <nav>
+      <img src="/images/icon-menu.svg" alt="" id='accordion'>
+      <img src="/images/logo.svg" alt="" id='logo'>
+      <a href='#' class='nav-links hidden'>Collections</a>
+      <a href='#' class='nav-links hidden'>Men</a>
+      <a href='#' class='nav-links hidden'>Women</a>
+      <a href='#' class='nav-links hidden'>About</a>
+      <a href='#' class='nav-links hidden'>Contact</a>
+    </nav>
 
-  Sneaker Company
+    <div class='cart-prof-pic'>
+      <img src="images/icon-cart.svg" alt="" id='cart-icon' onClick='toggleModal()'>
+      <img src="images/image-avatar.png" alt="" id='profile-pic'>
+    </div>
+  </header>
 
-  Fall Limited Edition Sneakers
+  <div id='image-carousel'>
+    <!-- <a href="#" class='carousel-nav' id='prev'><img src="images/icon-previous.svg" alt=""></a>
+    <a href="#" class='carousel-nav' id='next'><img src="images/icon-next.svg" alt=""></a> -->
+    <img src="images/image-product-1.jpg" alt="" class='image-full'>
+  </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+  <main>
 
-  $125.00
-  50%
-  $250.00
+  <span id='company-name'>Sneaker Company</span> 
 
-  0
-  Add to cart
-  
+  <h1>Fall Limited Edition Sneakers</h1>
+
+  <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.</p> 
+
+  <div id='price'>
+    <div id='sale-percent-container'>
+      <span id='sale-price'>$125.00</span>
+    <div id='percent-container'>
+      <span id='sale-percent'>50%</span> 
+    </div>
+    </div>
+    <span id='retail-price'>$250.00</span> 
+  </div>
+
+  <div class='center'>
+    <div id='purchase-quantity'>
+      <div id='decrement'  onClick='handleQuantity(-1)'>
+        <img src="images/icon-minus.svg" alt="">
+      </div>
+      <div id='quantity'>0</div>
+      <div id='increment'  onClick='handleQuantity(1)'>
+        <img src="images/icon-plus.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <div class='center'>
+    <button><img src="images/icon-cart.svg" alt=""> <span id='add-to-cart'>Add to cart</span></button>
+  </div>
+  </main>
+
+  <div id='modal' class='cart-modal'>
+    <div id='modal-title'><h2>Cart</h2></div>
+    <div id='modal-main'>
+      <img src="images/image-product-1-thumbnail.jpg" alt="" id='cart-thumbnail'>
+      <div id='modal-product-info'>
+        <span id='item-name'>Fall Limited Edition Sneakersaaa aaa</span>
+        <div id='math-totalprice-container'>
+          <span id='math'>$125 x 3</span>
+        <span id='totalprice'>375.00</span>
+      </div>
+    </div>
+    <img src="images/icon-delete.svg" alt="" id='trash-icon'>
+    </div>
+    <button>Checkout</button> 
+  </div>
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/CMikeZeltner">CMikeZeltner</a>.
   </div>
+
+  <script>
+    function handleQuantity(action) {
+      let num = parseInt(document.getElementById('quantity').innerHTML)
+      if(action === -1 && num > 0){
+        num -= 1
+      } else if (action === 1) {
+        num += 1
+      }
+
+      document.getElementById('quantity').innerHTML = num
+    }
+
+    function toggleModal() {
+      const modal = document.getElementById('modal')
+      if(document.getElementById('modal').style.display === 'none'){
+        document.getElementById('modal').style.display = 'block'
+      } else{
+        document.getElementById('modal').style.display = 'none'
+      }
+    }
+  </script>
 </body>
 </html>

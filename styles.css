@@ -1,0 +1,242 @@
+body{
+    font-family: 'Kumbh Sans';
+    font-size: 16px;
+}
+
+.hidden {
+	display: none;
+}
+
+header {
+	padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+#accordion{
+    margin-right: 1rem;
+}
+
+#cart-icon{
+    width: 20;
+    height: 22;
+    margin-right: 1rem;
+}
+
+#profile-pic{
+    width: 20px;
+    height: 22px;
+    
+}
+
+#image-carousel{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.image-full{
+    width: 100%;
+    max-width: 375px;
+    max-height: 300px;
+}
+
+main{
+    margin: .9rem;
+}
+
+
+#company-name{
+    display: block;
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+p{
+    color: hsl(220, 14%, 75%);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+#price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+#sale-percent-container{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+#sale-price{
+    font-weight: 700;
+    font-size: 26px;
+    margin-right: 1rem;;
+}
+
+#percent-container{
+    background-color: hsl(25, 100%, 94%);
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#sale-percent{
+    color: hsl(26, 100%, 55%);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#retail-price{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: hsl(220, 14%, 75%);
+}
+
+#purchase-quantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    max-width: 375px;
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#increment, #decrement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100px;
+}
+
+#increment:hover, #decrement:hover{
+    background-color: hsl(25, 100%, 90%);
+    cursor: pointer;
+}
+
+#quantity{
+    font-weight: 700;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+button{
+    border: none;
+    width: 100%;
+    max-width: 375px;
+    height: 50px; 
+    background-color: hsl(26, 100%, 55%);   
+    color: white;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 25px 20px -20px hsl(0, 0%, 0%, 25%);
+    margin-bottom:1.5rem;
+    transition: .25s;
+    font-family: 'Kumbh Sans';
+    font-weight: 700;
+}
+
+button:hover{
+    transform: translateY(1.5px);
+    cursor: pointer;
+}
+
+#add-to-cart{
+    display: inline-block;
+    font-weight: bold;
+}
+
+button > img {
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
+button > img{
+    height: 16px;
+}
+
+#modal{ 
+    margin: 0 auto;
+    padding: 0 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 14px;
+    max-width: 340px;
+    background: white;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    display:block;
+}
+
+#modal-title{
+}
+
+#modal-title > h2 {
+    padding: 1rem 1rem;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 2px solid hsl(220, 14%, 75%);
+}
+
+#modal-main{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modal-product-info{
+    padding-left: 1rem;
+}
+
+#item-name{
+    width: 100%;
+    white-space: no-wrap;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    word-wrap: break-word;
+}
+
+#cart-thumbnail{
+    height: 50px;
+}
+
+#trash-icon{
+    height: 14px;
+    width: 14px;
+    padding-left: 1rem;
+}
+
+
