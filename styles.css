@@ -4,6 +4,9 @@ body{
     overflow-x: hidden;
 }
 
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 .hidden {
 	display: none;
 }
@@ -17,11 +20,57 @@ header {
 }
 
 #accordion{
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 
 #accordion:hover, #profile-pic:hover, #cart-icon:hover, #increment:hover, #decrement:hover, button:hover, .trash-icon:hover{
     cursor: pointer;
+}
+
+#nav-tag-container{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 1.1rem;
+    width: 270px;
+    background-color: white;
+    z-index: 10;
+}
+
+#nav-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links{
+    text-decoration: none;
+    color: black;
+    font-family: 'Kumbh sans';
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+
+#close-button{
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+#transparent-background{
+    background-color: rgba(0,0,0,.7);
+    z-index: 9;
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 #cart-prof-pic{
@@ -66,16 +115,24 @@ header {
 }
 
 #image-carousel{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    height: 100%;
+    display: block;
+    margin: 0 auto;
+    width: fit-content
+}
+
+.carousel-nav{
+    position: absolute;
+    top: 50%;
+}
+
+#next{
+    right: 1rem;
 }
 
 .image-full{
     width: 100%;
-    max-width: 375px;
-    max-height: 300px;
+    width: 375px;
+    height: 300px;
 }
 
 main{
