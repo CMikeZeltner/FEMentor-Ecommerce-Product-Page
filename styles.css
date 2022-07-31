@@ -1,6 +1,7 @@
 body{
     font-family: 'Kumbh Sans';
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 .hidden {
@@ -19,16 +20,49 @@ header {
     margin-right: 1rem;
 }
 
+#accordion:hover, #profile-pic:hover, #cart-icon:hover, #increment:hover, #decrement:hover, button:hover, .trash-icon:hover{
+    cursor: pointer;
+}
+
+#cart-prof-pic{
+    display: flex;
+    align-items: center;
+}
+
 #cart-icon{
-    width: 20;
-    height: 22;
+    width: 20px;
+    height: 20px;
     margin-right: 1rem;
+}
+
+
+#cart-quantity{
+    width:20px;
+    height: 12px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    position: absolute;
+    top: 13px;
+    right: 50px;   
+    font-size: 12px;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+    cursor: pointer;
 }
 
 #profile-pic{
     width: 20px;
     height: 22px;
-    
+    padding: 2px;
+}
+
+#profile-pic:hover{
+    border: 2px solid hsl(26, 100%, 55%);
+    padding: 0;
+    border-radius: 100%;
 }
 
 #image-carousel{
@@ -84,11 +118,11 @@ p{
 #sale-percent-container{
     display: flex;
     width: 50%;
-    align-items: center;
 }
 
 #sale-price{
     font-weight: 700;
+    height: 26px;
     font-size: 26px;
     margin-right: 1rem;;
 }
@@ -97,14 +131,17 @@ p{
     background-color: hsl(25, 100%, 94%);
     display: inline-block;
     text-align: center;
-    width: 35px;
-    height: 20px;
+    width: 40px;
+    height: 26px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #sale-percent{
     color: hsl(26, 100%, 55%);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -136,7 +173,6 @@ p{
 
 #increment:hover, #decrement:hover{
     background-color: hsl(25, 100%, 90%);
-    cursor: pointer;
 }
 
 #quantity{
@@ -155,7 +191,7 @@ button{
     width: 100%;
     max-width: 375px;
     height: 50px; 
-    background-color: hsl(26, 100%, 55%);   
+    background-color: hsla(26, 100%, 55%);   
     color: white;
     border-radius: 10px;
     margin: auto;
@@ -166,9 +202,16 @@ button{
     font-weight: 700;
 }
 
+#add-to-cart-button{
+    background-color: hsla(26, 100%, 55%, 0.4);
+}
+
 button:hover{
-    transform: translateY(1.5px);
-    cursor: pointer;
+    transform: translateY(-1.5px);
+}
+
+button:active{
+    transform: translateY(.5px);
 }
 
 #add-to-cart{
@@ -191,17 +234,17 @@ button > img{
     border: 1px solid black;
     border-radius: 10px;
     font-size: 14px;
-    max-width: 340px;
+    min-width: 330px;
+    max-width: 330px;
     background: white;
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0;
     right: 0;
-    display:block;
+    min-height: 200px;
+    display: none;
 }
 
-#modal-title{
-}
 
 #modal-title > h2 {
     padding: 1rem 1rem;
@@ -210,18 +253,25 @@ button > img{
     border-bottom: 2px solid hsl(220, 14%, 75%);
 }
 
-#modal-main{
-    padding: 1rem 0;
+#item-container{
+    max-height: 350px;
+    overflow-y: scroll;
+}
+
+.modal-main{
+    margin: 1rem 0;
+    padding: 0 .1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
-#modal-product-info{
+.modal-product-info{
     padding-left: 1rem;
 }
 
-#item-name{
+.item-name{
     width: 100%;
     white-space: no-wrap;
     text-overflow: ellipsis;
@@ -229,14 +279,31 @@ button > img{
     word-wrap: break-word;
 }
 
-#cart-thumbnail{
+.total-price{
+    font-weight: 700;
+    margin-left: .5rem;
+}
+
+.cart-thumbnail{
     height: 50px;
 }
 
-#trash-icon{
+.trash-icon{
     height: 14px;
     width: 14px;
     padding-left: 1rem;
+
 }
 
+#checkout-button{
+    display: none;
+}
+
+
+#cart-empty{
+    text-align: center;
+    padding: 54px 0;
+    font-weight: 700;
+    color:hsl(220, 14%, 75%)
+}
 
