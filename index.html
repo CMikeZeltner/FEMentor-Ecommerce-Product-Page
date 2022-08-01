@@ -28,7 +28,7 @@
     <div>
       <img src="/images/icon-menu.svg" alt="" id='accordion' onClick='toggleMenu()'>
       <img src="/images/logo.svg" alt="" id='logo'>
-      <div id='nav-tag-container' class='hidden'>
+      <div id='nav-tag-container'>
         <img src="images/icon-close.svg" alt="" id='close-button' onClick='toggleMenu()'>
         <nav id='nav-container'>
           <a href='#' class='nav-links'>Collections</a>
@@ -48,10 +48,16 @@
     </div>
   </header>
 
-  <div id='image-carousel'>
-    <a href="#" class='carousel-nav' id='prev'><img src="images/icon-previous.svg" alt=""></a>
-    <a href="#" class='carousel-nav' id='next'><img src="images/icon-next.svg" alt=""></a>
-    <img src="images/image-product-1.jpg" alt="" class='image-full'>
+  <div id=carousel-container>
+    <div id='image-carousel'>
+      <div class='carousel-nav' id='prev'>
+        <img src="images/icon-previous.svg" class='nav-icon' alt="">
+      </div>
+      <div class='carousel-nav' id='next' onClick='handleCarousel()'>
+        <img src="images/icon-next.svg" class='nav-icon' alt="">
+      </div>
+      <img src="images/image-product-1.jpg" alt="" class='image-full'>
+    </div>
   </div>
 
   <main>
