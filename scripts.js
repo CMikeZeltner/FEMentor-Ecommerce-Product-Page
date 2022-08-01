@@ -1,6 +1,7 @@
 //Adds event listeners to increment/decrement buttons
 //Disables/Enables "Add To Cart" button depending on quantity
-window.onload = function() { document.querySelectorAll('.inc-dec').forEach(element => {
+window.onload = function() { 
+    document.querySelectorAll('.inc-dec').forEach(element => {
     element.addEventListener('click', () => {
       const addButton = document.getElementById('add-to-cart-button')
       const addSpan = document.getElementById('quantity')
@@ -12,6 +13,20 @@ window.onload = function() { document.querySelectorAll('.inc-dec').forEach(eleme
         addButton.style.backgroundColor = 'hsl(26, 100%, 55%)'
       }
     })
+  })
+
+  window.addEventListener('resize', () =>{
+
+    //If the window is resized, the nav bar is hidden.
+    //Should come back to this later
+    if(window.innerWidth >= 769){
+        document.getElementById('nav-tag-container').style.display = 'flex'
+        document.getElementById('transparent-background')
+
+    } else {
+        document.getElementById('nav-tag-container').style.display = 'none'
+        document.getElementById('transparent-background').style.display = 'none'
+    }
   })
 }
 

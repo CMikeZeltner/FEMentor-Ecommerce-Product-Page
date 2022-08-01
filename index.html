@@ -25,7 +25,7 @@
 
 
   <header>
-    <div>
+    <div id='logo-links'>
       <img src="/images/icon-menu.svg" alt="" id='accordion' onClick='toggleMenu()'>
       <img src="/images/logo.svg" alt="" id='logo'>
       <div id='nav-tag-container'>
@@ -42,8 +42,10 @@
     </div>
 
     <div id='cart-prof-pic'>
-      <img src="images/icon-cart.svg" alt="" id='cart-icon' onClick='toggleModal()'>
-      <span id='cart-quantity' onClick='toggleModal()''></span>
+      <div id='cart-icon-quantity-container'>
+        <img src="images/icon-cart.svg" alt="" id='cart-icon' onClick='toggleModal()'>
+        <span id='cart-quantity' onClick='toggleModal()''></span>
+      </div>
       <img src="images/image-avatar.png" alt="" id='profile-pic'>
     </div>
   </header>
@@ -59,6 +61,7 @@
       <img src="images/image-product-1.jpg" alt="" class='image-full'>
     </div>
   </div>
+
 
   <main>
 
