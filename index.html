@@ -15,11 +15,6 @@
   
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
@@ -45,6 +40,14 @@
       <div id='cart-icon-quantity-container'>
         <img src="images/icon-cart.svg" alt="" id='cart-icon' onClick='toggleModal()'>
         <span id='cart-quantity' onClick='toggleModal()''></span>
+
+        <div id='modal' class='cart-modal'>
+          <div id='modal-title'><h2>Cart</h2></div>
+          <div id='item-container'></div>
+          <div id='cart-empty'>Your cart is empty.</div>
+          <button id='checkout-button'>Checkout</button>
+        </div>
+
       </div>
       <img src="images/image-avatar.png" alt="" id='profile-pic'>
     </div>
@@ -58,7 +61,10 @@
       <div class='carousel-nav' id='next' onClick='handleCarousel()'>
         <img src="images/icon-next.svg" class='nav-icon' alt="">
       </div>
-      <img src="images/image-product-1.jpg" alt="" class='image-full'>
+      <ul>
+        <li><img src="images/image-product-1.jpg" alt="" class='image-full'></li>
+      </ul>
+      
     </div>
   </div>
 
@@ -100,12 +106,7 @@
   </div>
   </main>
 
-  <div id='modal' class='cart-modal'>
-    <div id='modal-title'><h2>Cart</h2></div>
-    <div id='item-container'></div>
-    <div id='cart-empty'>Your cart is empty.</div>
-    <button id='checkout-button'>Checkout</button>
-  </div>
+  
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

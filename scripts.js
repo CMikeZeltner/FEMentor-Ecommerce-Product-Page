@@ -28,7 +28,10 @@ window.onload = function() {
         document.getElementById('transparent-background').style.display = 'none'
     }
   })
+
 }
+
+
 
 function toggleMenu() {
     if(document.getElementById('nav-tag-container').style.display === 'block'){
@@ -89,8 +92,8 @@ modal.innerHTML += `<div class='modal-main' id='${id}'>
 <div class='modal-product-info'>
 <span class='item-name'>${name}</span>
 <div class='math-total-price-container'>
-    <span class='math'>$${price} x ${quantity}</span>
-<span class='total-price'>$${total}</span>
+    <span class='math'>$${price}.00 x ${quantity}</span>
+<span class='total-price'>$${total}.00</span>
 </div>
 </div>
 <img src="images/icon-delete.svg" alt="" class='trash-icon' onClick=deleteItem(${id})>

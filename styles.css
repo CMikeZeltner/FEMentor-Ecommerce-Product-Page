@@ -26,11 +26,10 @@ header {
 #logo{
 	height: 20px;
 	width: 138px;
+	margin-left: .5rem
 }
 
-#accordion {
-	margin-right: 1.5rem;
-}
+
 
 #accordion:hover,
 #profile-pic:hover,
@@ -272,6 +271,10 @@ p {
 	font-weight: 700;
 }
 
+.item-name, .math{
+	color: hsl(220, 14%, 75%)
+}
+
 .center {
 	display: flex;
 	justify-content: center;
@@ -323,18 +326,19 @@ button > img {
 #modal {
 	margin: 0 auto;
 	padding: 0 1rem;
-	border: 1px solid black;
 	border-radius: 10px;
 	font-size: 14px;
-	min-width: 330px;
-	max-width: 330px;
+	min-width: 250px;
+	max-width: 250px;
 	background: white;
 	position: absolute;
-	top: 80px;
-	left: 0;
-	right: 0;
+	top: 40px;
+	
+	right: -50%;
 	min-height: 200px;
+	box-shadow: 5px 10px 25px -5px hsl(0, 0%, 0%, 25%);
 	display: none;
+	z-index: 1
 }
 
 #modal-title > h2 {
@@ -355,18 +359,20 @@ button > img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	white-space: nowrap;
+	text-overflow:ellipsis;
 }
 
 .modal-product-info {
 	padding-left: 1rem;
+	
 }
 
 .item-name {
-	width: 100%;
-	white-space: no-wrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	word-wrap: break-word;
+	max-width: 150px;
+	display: inline-block;
+	text-overflow:ellipsis;
+	overflow:hidden;
 }
 
 .total-price {
@@ -406,8 +412,8 @@ button > img {
 	header{
 		max-width: 1200px;
 		margin: 0 auto 3rem auto;
-		padding: 2rem 0;
-		border-bottom: 2px solid hsl(220, 14%, 75%);
+		padding: 0 0;
+		border-bottom: 1px solid hsl(220, 14%, 75%);
 		display: flex;
 		align-items: center;
 		
@@ -417,11 +423,17 @@ button > img {
 		display: none;
 	}
 
+
+	#logo{
+		margin-bottom: 4px;
+	}
 	
 
 	#nav-tag-container{
 		position: static;
-		width: 100%
+		display: flex;
+		width: 100%;
+		margin-bottom: 4px;
 	}
 
 	#nav-container{
@@ -431,21 +443,42 @@ button > img {
 	}
 
 	.nav-links{
+		display: flex;
+		align-items: center;
+		height: 100%;
 		margin: 0 0 0 1.5rem;
 		padding: 0;
+		border-bottom:  4px solid white;
+		transition: border .10s
+	}
 
+	.nav-links:hover{
+		border-bottom: 4px solid hsl(26, 100%, 55%);
+		
+		
 	}
 
 	#logo-links{
 		display: flex;
 		align-items: center;
-		flex-grow: 4;
+		height: 100px;
 	}
 
 	#profile-pic{
 		height: 40px;
 		width: 40px;
+		margin-right: .5rem
 	}
 
+	
+	#modal{
+		min-width: 300px;
+		max-width: 300px;
+	}
+
+	
+	.item-name{
+		display: inline;
+	}
 
 }
