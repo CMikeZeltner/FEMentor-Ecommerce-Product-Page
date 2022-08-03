@@ -7,6 +7,7 @@ body {
 .attribution {
 	font-size: 11px;
 	text-align: center;
+	margin-top: 10rem;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
@@ -238,6 +239,7 @@ p {
 #retail-price {
 	text-decoration: line-through;
 	font-size: 12px;
+	font-weight: 700;
 	color: hsl(220, 14%, 75%);
 }
 
@@ -250,6 +252,8 @@ p {
 	max-width: 375px;
 	background-color: hsl(25, 100%, 94%);
 	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 1rem;
 }
 
@@ -278,7 +282,6 @@ p {
 .center {
 	display: flex;
 	justify-content: center;
-	width: 100%;
 }
 
 button {
@@ -289,7 +292,6 @@ button {
 	background-color: hsla(26, 100%, 55%);
 	color: white;
 	border-radius: 10px;
-	margin: auto;
 	box-shadow: 0px 25px 20px -20px hsl(0, 0%, 0%, 25%);
 	margin-bottom: 1.5rem;
 	transition: .25s;
@@ -407,6 +409,13 @@ button > img {
 	body{
 		max-width: 1200px;
 		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	#desktop-container{
+		display: flex;
+		padding: 0 1rem;
+		justify-content: space-around;
 	}
 
 	header{
@@ -418,6 +427,7 @@ button > img {
 		align-items: center;
 		
 	}
+
 
 	#accordion, #close-button{
 		display: none;
@@ -446,7 +456,7 @@ button > img {
 		display: flex;
 		align-items: center;
 		height: 100%;
-		margin: 0 0 0 1.5rem;
+		margin: 0 0 0 2rem;
 		padding: 0;
 		border-bottom:  4px solid white;
 		transition: border .10s
@@ -471,14 +481,72 @@ button > img {
 	}
 
 	
-	#modal{
-		min-width: 300px;
-		max-width: 300px;
+	main{
+		max-width: 500px;
+	
 	}
 
+	#carousel-container{
+		
+	}
+
+	.image-full{
+		height: 80%;
+		border-radius: 15px;
+	}
+
+	h1{
+		font-size: 40px;
+		margin-bottom: 1.5rem;
+	}
+
+	p{
+		line-height: 1.5;
+	}
+
+	#price{
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 0 0 2rem 0;
+	}
+
+	#sale-percent-container{
+		margin-bottom: 1rem;
+	}
 	
 	.item-name{
 		display: inline;
 	}
 
+	#desktop-quantity-button-container{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+	}
+
+	#purchase-quantity{
+		width: 30%;
+		min-width: 120px;
+		margin: 0;
+	}
+
+	button{
+		width: 80%;
+		margin: 0;
+
+	}
+
+	.center{
+		flex-grow: 2;
+		justify-content: flex-end;
+		width: 70%;
+	}
+
+
+
+	#modal{
+		min-width: 300px;
+		max-width: 300px;
+	}
 }

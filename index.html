@@ -53,6 +53,7 @@
     </div>
   </header>
 
+  <div id='desktop-container'>
   <div id=carousel-container>
     <div id='image-carousel'>
       <div class='carousel-nav' id='prev'>
@@ -88,7 +89,8 @@
     <span id='retail-price'>$250.00</span> 
   </div>
 
-  <div class='center'>
+  <div id='desktop-quantity-button-container'>
+
     <div id='purchase-quantity'>
       <div id='decrement' class='inc-dec'  onClick='handleQuantity(-1)'>
         <img src="images/icon-minus.svg" alt="">
@@ -98,15 +100,16 @@
         <img src="images/icon-plus.svg" alt="">
       </div>
     </div>
-  </div>
 
 
   <div class='center'>
     <button onClick='addToCart()' id='add-to-cart-button' disabled><img src="images/icon-cart.svg" alt=""> <span id='add-to-cart'>Add to cart</span></button>
   </div>
+</div>
   </main>
 
-  
+</div>
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
