@@ -29,9 +29,22 @@ window.onload = function() {
     }
   })
 
+  window.addEventListener('resize', () =>{
+
+    //If the window is resized, the nav bar is hidden.
+    //Should come back to this later
+    document.getElementById('image-carousel-modal').style.display = 'none'
+  })
+
   const firstImage = document.querySelector('.image-full')
   firstImage.style.display = 'initial'
 
+
+}
+
+function openImageModal() {
+    document.getElementById('image-carousel-modal').style.display = 'flex'
+    document.querySelector('.image-full-modal').style.display = 'initial'
 }
 
 //Changes image and thumbnail when clicked
@@ -82,11 +95,60 @@ function displayImageMobile(direction){
         images[index].style.display = 'initial'
         thumbnails[index].className = 'image-thumbnail-selected'
     }
+}
 
+//Changes image and thumbnail when clicked
+function displayImageModal(index){
+    //Displays selected image, hides previous
+    const images = document.querySelectorAll('.image-full-modal')
+    images.forEach(image => {
+        image.style.display = 'none'
+    })
+    images[index - 1].style.display = 'initial'
 
+    //Applies selected class to the selected thumbnail
+    const thumbnails = document.querySelectorAll('.image-thumbnail-modal-selected, .image-thumbnail-modal')
+    thumbnails.forEach(thumbnail => {
+        thumbnail.className = 'image-thumbnail-modal'
+    })
+    thumbnails[index - 1].className = 'image-thumbnail-modal-selected'
+}
 
-    
+//Slightly different on mobile
+function prevNextModal(direction){
+    //Displays selected image, hides previous
+    const images = document.querySelectorAll('.image-full-modal')
+    let i = 0
+    while(i < images.length){
+        if(images[i].style.display === 'initial'){
+            images[i].style.display = 'none'
+            break
+        }
+        i++
+    }
 
+    //Applies selected class to the selected thumbnail
+    const thumbnails = document.querySelectorAll('.image-thumbnail-modal-selected, .image-thumbnail-modal')
+    thumbnails.forEach(thumbnail => {
+        thumbnail.className = 'image-thumbnail-modal'
+    })
+
+    let index = i + direction
+
+    if(index === 4){
+        images[0].style.display = 'initial'
+        thumbnails[0].className = 'image-thumbnail-modal-selected'
+    } else if (index === -1){
+        images[3].style.display = 'initial'
+        thumbnails[3].className = 'image-thumbnail-modal-selected'
+    } else {
+        images[index].style.display = 'initial'
+        thumbnails[index].className = 'image-thumbnail-modal-selected'
+    }
+}
+
+function closeModal(){
+    document.getElementById('image-carousel-modal').style.display = 'none'
 }
 
 

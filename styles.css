@@ -139,6 +139,12 @@ button:hover,
 	width: fit-content;
 }
 
+#image-carousel-modal{
+	display: none;
+}
+
+
+
 .carousel-nav {
 	position: absolute;
 	top: 45%;
@@ -162,6 +168,10 @@ button:hover,
 
 .nav-icon {
 	width: 8px;
+}
+
+#image-full-container{
+	pointer-events: none;
 }
 
 .image-full {
@@ -511,22 +521,16 @@ button > img {
 		display: none;
 	}
 
-	#image-carousel-modal{
-		position: relative;
-		z-index: 1;
-		background-color: rgba(0, 0, 0, .2);
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-	}
+
+
+
 
 	#image-thumbnail-container{
 		display: flex;
 		justify-content: space-between;
 	}
 
-	.image-thumbnail{
+	.image-thumbnail, .image-thumbnail-modal{
 		display: initial;
 		height: 80px;
 		width: 80px;
@@ -538,7 +542,7 @@ button > img {
 		cursor: pointer;
 	}
 
-	.image-thumbnail-selected{
+	.image-thumbnail-selected, .image-thumbnail-modal-selected{
 		
 		display: initial;
 		height: 74px;
@@ -598,6 +602,89 @@ button > img {
 		flex-grow: 2;
 		justify-content: center;
 		width: 70%;
+	}
+
+	#image-carousel-modal{
+		display: none;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		z-index: 10;
+		background-color: rgba(0, 0, 0, .7);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	image-carousel-nav-img-wrapper{
+		width: 500px;
+		height: 500px
+	}
+
+	.carousel-nav-modal{
+		
+		position: relative;
+		top: 45%;
+		width: 50px;
+		height: 50px;
+		border-radius: 60px;
+		background-color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+
+	#prev-modal{
+		top: 50%;
+		right: 5%
+	}
+
+	#next-modal{
+		top: 42.2%;
+		left: 95%;
+	}
+	
+
+	#image-modal-close{
+		position: absolute;
+		top: 7%;
+		left: 72%;
+		font-size: 35px;
+		font-weight: 400;
+		z-index: 10;
+		color: white;
+
+	}
+
+	#image-modal-close:hover{
+		color: hsl(26, 100%, 55%);
+		cursor: pointer;
+		
+	}
+
+
+	.image-full-modal{
+		display: none;
+		width: 500px;
+		height: 500px;
+		border-radius: 15px;
+		margin-bottom: 2rem
+	}
+
+	#image-full-container{
+		pointer-events:initial;
+	}
+
+	#image-thumbnail-container-modal{
+		display: flex;
+		flex-direction: row;
+		width: 50%;
+		justify-content: space-around;
 	}
 
 
