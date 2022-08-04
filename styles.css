@@ -165,9 +165,18 @@ button:hover,
 }
 
 .image-full {
+	display: none;
 	width: 100%;
 	width: 375px;
 	height: 300px;
+}
+
+.image-thumbnail{
+	display: none;
+}
+
+.image-thumbnail-selected{
+	display: none;
 }
 
 main {
@@ -416,6 +425,7 @@ button > img {
 		display: flex;
 		padding: 0 1rem;
 		justify-content: space-around;
+		align-items: center;
 	}
 
 	header{
@@ -459,12 +469,14 @@ button > img {
 		margin: 0 0 0 2rem;
 		padding: 0;
 		border-bottom:  4px solid white;
-		transition: border .10s
+		transition: border .10s;
+		font-weight: 400;
+		color: hsl(220, 14%, 75%)
 	}
 
 	.nav-links:hover{
 		border-bottom: 4px solid hsl(26, 100%, 55%);
-		
+		color: black;
 		
 	}
 
@@ -482,17 +494,58 @@ button > img {
 
 	
 	main{
-		max-width: 500px;
-	
+		max-width: 450px;
 	}
 
-	#carousel-container{
-		
-	}
 
 	.image-full{
 		height: 80%;
 		border-radius: 15px;
+		margin-bottom: 2rem;
+		display: none;
+	}
+
+	
+
+	.carousel-nav{
+		display: none;
+	}
+
+	#image-carousel-modal{
+		position: relative;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, .2);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	#image-thumbnail-container{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.image-thumbnail{
+		display: initial;
+		height: 80px;
+		width: 80px;
+		border-radius: 15px;
+	}
+
+	.image-thumbnail:hover{
+		opacity: .5;
+		cursor: pointer;
+	}
+
+	.image-thumbnail-selected{
+		
+		display: initial;
+		height: 74px;
+		width: 74px;
+		border: 3px solid hsl(26, 100%, 55%);
+		border-radius: 15px;
+		opacity: .5;
 	}
 
 	h1{
@@ -531,6 +584,10 @@ button > img {
 		margin: 0;
 	}
 
+	#quantity{
+		padding: .2rem;
+	}
+
 	button{
 		width: 80%;
 		margin: 0;
@@ -539,7 +596,7 @@ button > img {
 
 	.center{
 		flex-grow: 2;
-		justify-content: flex-end;
+		justify-content: center;
 		width: 70%;
 	}
 

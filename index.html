@@ -56,14 +56,24 @@
   <div id='desktop-container'>
   <div id=carousel-container>
     <div id='image-carousel'>
-      <div class='carousel-nav' id='prev'>
+      <div class='carousel-nav' id='prev' onclick='displayImageMobile(-1)'>
         <img src="images/icon-previous.svg" class='nav-icon' alt="">
       </div>
-      <div class='carousel-nav' id='next' onClick='handleCarousel()'>
+      <div class='carousel-nav' id='next' onclick='displayImageMobile(1)'>
         <img src="images/icon-next.svg" class='nav-icon' alt="">
       </div>
-      <ul>
+      <ul id='image-full-container'>
         <li><img src="images/image-product-1.jpg" alt="" class='image-full'></li>
+        <li><img src="images/image-product-2.jpg" alt="" class='image-full'></li>
+        <li><img src="images/image-product-3.jpg" alt="" class='image-full'></li>
+        <li><img src="images/image-product-4.jpg" alt="" class='image-full'></li>
+      </ul>
+
+      <ul id='image-thumbnail-container'>
+        <li><img src="images/image-product-1-thumbnail.jpg" alt="" class='image-thumbnail-selected' onclick='displayImage(1)'></li>
+        <li><img src="images/image-product-2-thumbnail.jpg" alt="" class='image-thumbnail' onclick='displayImage(2)'></li>
+        <li><img src="images/image-product-3-thumbnail.jpg" alt="" class='image-thumbnail' onclick='displayImage(3)'></li>
+        <li><img src="images/image-product-4-thumbnail.jpg" alt="" class='image-thumbnail' onclick='displayImage(4)'></li>
       </ul>
       
     </div>

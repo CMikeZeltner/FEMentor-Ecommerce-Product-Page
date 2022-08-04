@@ -29,6 +29,64 @@ window.onload = function() {
     }
   })
 
+  const firstImage = document.querySelector('.image-full')
+  firstImage.style.display = 'initial'
+
+}
+
+//Changes image and thumbnail when clicked
+function displayImage(index){
+    //Displays selected image, hides previous
+    const images = document.querySelectorAll('.image-full')
+    images.forEach(image => {
+        image.style.display = 'none'
+    })
+    images[index - 1].style.display = 'initial'
+
+    //Applies selected class to the selected thumbnail
+    const thumbnails = document.querySelectorAll('.image-thumbnail-selected, .image-thumbnail')
+    thumbnails.forEach(thumbnail => {
+        thumbnail.className = 'image-thumbnail'
+    })
+    thumbnails[index - 1].className = 'image-thumbnail-selected'
+}
+
+//Slightly different on mobile
+function displayImageMobile(direction){
+    //Displays selected image, hides previous
+    const images = document.querySelectorAll('.image-full')
+    let i = 0
+    while(i < images.length){
+        if(images[i].style.display === 'initial'){
+            images[i].style.display = 'none'
+            break
+        }
+        i++
+    }
+
+    //Applies selected class to the selected thumbnail
+    const thumbnails = document.querySelectorAll('.image-thumbnail-selected, .image-thumbnail')
+    thumbnails.forEach(thumbnail => {
+        thumbnail.className = 'image-thumbnail'
+    })
+
+    let index = i + direction
+
+    if(index === 4){
+        images[0].style.display = 'initial'
+        thumbnails[0].className = 'image-thumbnail-selected'
+    } else if (index === -1){
+        images[3].style.display = 'initial'
+        thumbnails[3].className = 'image-thumbnail-selected'
+    } else {
+        images[index].style.display = 'initial'
+        thumbnails[index].className = 'image-thumbnail-selected'
+    }
+
+
+
+    
+
 }
 
 
@@ -64,6 +122,7 @@ if(document.getElementById('modal').style.display === 'block'){
 }
 }
 
+
 function addToCart(){
 createCartEntry()
 
@@ -72,6 +131,7 @@ const modal = document.getElementById('modal')
 //Show "Checkout" button if this is the first cart item added
 document.getElementById('checkout-button').style.display = 'block'
 }
+
 
 
 function createCartEntry() {
@@ -87,6 +147,8 @@ document.getElementById('cart-empty').style.display = 'none'
 
 let id = getID()
 
+
+//If there's a smarter/more eloquent way of doing this please let me know
 modal.innerHTML += `<div class='modal-main' id='${id}'>
 <img src="images/image-product-1-thumbnail.jpg" alt="" class='cart-thumbnail'>
 <div class='modal-product-info'>
