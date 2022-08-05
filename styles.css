@@ -31,7 +31,8 @@ button:hover,
 body {
 	font-family: 'Kumbh Sans';
 	font-size: 16px;
-	overflow-x: hidden;
+	margin: 0 1rem;
+	overflow-y: scroll;
 }
 
 .attribution {
@@ -196,7 +197,7 @@ header {
 
 main {
 	max-width: 375px;
-	margin: 1rem auto 1rem auto;
+	margin: 1rem auto;
 }
 
 #company-name {
@@ -355,15 +356,14 @@ button > img {
 	padding: 0 1rem;
 	border-radius: 10px;
 	font-size: 14px;
-	min-width: 250px;
-	max-width: 250px;
+	width: 270px;
 	background: white;
 	position: absolute;
-	top: 40px;
-	right: -50%;
+	top: 25px;
+	left: -270px;
 	min-height: 200px;
 	box-shadow: 5px 10px 25px -5px hsl(0, 0%, 0%, 25%);
-	z-index: 1
+	z-index: 11;
 }
 
 #cart-header > h2 {
@@ -374,13 +374,16 @@ button > img {
 }
 
 #cart-item-container {
-	max-height: 320px;
-	overflow-y: hidden;
+	overflow: scroll;
+	max-height: 300px;
+	
 }
+
+
 
 .modal-main {
 	margin: 1rem 0;
-	padding: 0 .1rem;
+	padding: 0 .2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -390,11 +393,11 @@ button > img {
 
 .modal-product-info {
 	padding-left: 1rem;
-	
+	margin-right: auto;
 }
 
 .item-name {
-	max-width: 150px;
+	width: 145px;
 	display: inline-block;
 	text-overflow:ellipsis;
 	overflow:hidden;
@@ -417,7 +420,8 @@ button > img {
 }
 
 #checkout-button {
-	margin: 0 auto 1.5rem auto;
+	width: 100%;
+	margin: 1.5rem auto 1.5rem auto;
 }
 
 #cart-empty {
@@ -441,6 +445,7 @@ button > img {
 
 
 	body{
+		overflow: hidden;
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 0 1rem;
@@ -463,20 +468,20 @@ button > img {
 		
 	}
 
-
-
-
+	main{
+		margin: 1rem;
+	}
 
 	#logo{
 		margin-bottom: 4px;
 	}
 	
-
 	#nav-tag-container{
 		position: static;
 		display: flex;
 		width: 100%;
 		margin-bottom: 4px;
+		
 	}
 
 	#nav-container{
@@ -509,18 +514,37 @@ button > img {
 		height: 100px;
 	}
 
+	#cart-prof-pic{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#cart-icon{
+		margin-right: 2rem;
+	}
+
+	#cart-modal {
+		margin: 0 auto;
+		padding: 0 1rem;
+		width: 300px;
+		max-width: 350px;
+		top: 30px;
+		left: -300px;
+		transform: none;
+	}
+
+	.item-name{
+		width: auto;
+	}
+
 	#profile-pic{
-		height: 40px;
-		width: 40px;
+		height: 46px;
+		width: 46px;
 		margin-right: .5rem
 	}
 
 	
-	main{
-		margin: 1rem;
-	}
-
-
 	.image-full{
 		height: 80%;
 		border-radius: 15px;
@@ -579,10 +603,7 @@ button > img {
 		margin-bottom: 1rem;
 	}
 	
-	.item-name{
-		display: inline;
-		line-height: 1.5 ;
-	}
+
 
 	#desktop-quantity-button-container{
 		display: flex;
@@ -693,10 +714,4 @@ button > img {
 		margin-top: 2rem;
 	}
 
-
-
-	#modal{
-		min-width: 300px;
-		max-width: 300px;
-	}
 }
