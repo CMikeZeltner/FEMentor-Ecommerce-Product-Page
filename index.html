@@ -76,10 +76,25 @@
 
   <div id='desktop-container'>
     <div id='image-carousel'>
-      <div class='carousel-nav' id='prev' onclick='prevNextMobile(-1)'>
-        <img src="images/icon-previous.svg" class='nav-icon' alt="">
-      </div>
 
+      <div id='nav-wrapper'>
+        <div class='carousel-nav' id='prev' onclick='prevNextMobile(-1)'>
+          <img 
+          src="images/icon-previous.svg" 
+          class='nav-icon' 
+          alt=""
+          role='button'
+          tabindex='0'>
+        </div>
+        <div class='carousel-nav' id='next' onclick='prevNextMobile(1)'>
+          <img 
+          src="images/icon-next.svg" 
+          class='nav-icon' 
+          alt=""
+          role='button'
+          tabindex='0'>
+        </div>
+      </div>
       <ul id='image-full-container' onclick='openImageModal()'>
         <li>
           <img 
@@ -105,14 +120,6 @@
           class='image-full'>
         </li>
       </ul>
-      <div class='carousel-nav' id='next' onclick='prevNextMobile(1)'>
-        <img 
-        src="images/icon-next.svg" 
-        class='nav-icon' 
-        alt=""
-        role='button'
-        tabindex='0'>
-      </div>
 
       <ul id='image-thumbnail-container'>
         <li>
@@ -214,27 +221,73 @@
   </div>
 
   <div id='image-carousel-modal'>
-    <span id='image-modal-close' onclick='closeModal()'>&times;</span>
-    <div id='image-carousel-nav-img-wrapper'>
-      <div class='carousel-nav-modal' id='prev-modal' onclick='prevNextModal(-1)'>
-        <img src="images/icon-previous.svg" class='nav-icon-modal' alt="">
-      </div>
-      <div class='carousel-nav-modal' id='next-modal' onclick='prevNextModal(1)'>
-        <img src="images/icon-next.svg" class='nav-icon-modal' alt="">
-      </div>
 
+    <div id='image-nav-wrapper'>
+      <span id='image-modal-close' onclick='closeModal()'>&times;</span>
+      <div id='modal-nav-wrapper'>
+        <div class='carousel-nav-modal' id='prev-modal' onclick='prevNextModal(-1)'>
+          <img src="images/icon-previous.svg" class='nav-icon-modal' alt="">
+        </div>
+        <div class='carousel-nav-modal' id='next-modal' onclick='prevNextModal(1)'>
+          <img src="images/icon-next.svg" class='nav-icon-modal' alt="">
+        </div>
+      </div>
       <ul id='image-full-container-modal'>
-        <li><img src="images/image-product-1.jpg" alt="" class='image-full-modal'></li>
-        <li><img src="images/image-product-2.jpg" alt="" class='image-full-modal'></li>
-        <li><img src="images/image-product-3.jpg" alt="" class='image-full-modal'></li>
-        <li><img src="images/image-product-4.jpg" alt="" class='image-full-modal'></li>
+        <li>
+          <img 
+          src="images/image-product-1.jpg" 
+          alt="" 
+          class='image-full-modal'>
+        </li>
+        <li>
+          <img 
+          src="images/image-product-2.jpg" 
+          alt="" 
+          class='image-full-modal'>
+        </li>
+        <li>
+          <img 
+          src="images/image-product-3.jpg" 
+          alt="" 
+          class='image-full-modal'>
+        </li>
+        <li>
+          <img 
+          src="images/image-product-4.jpg" 
+          alt="" 
+          class='image-full-modal'>
+        </li>
       </ul>
     </div>
+
     <ul id='image-thumbnail-container-modal'>
-      <li><img src="images/image-product-1-thumbnail.jpg" alt="" class='image-thumbnail-modal-selected' onclick='displayImageModal(1)'></li>
-      <li><img src="images/image-product-2-thumbnail.jpg" alt="" class='image-thumbnail-modal' onclick='displayImageModal(2)'></li>
-      <li><img src="images/image-product-3-thumbnail.jpg" alt="" class='image-thumbnail-modal' onclick='displayImageModal(3)'></li>
-      <li><img src="images/image-product-4-thumbnail.jpg" alt="" class='image-thumbnail-modal' onclick='displayImageModal(4)'></li>
+      <li>
+        <img 
+        src="images/image-product-1-thumbnail.jpg" 
+        alt="" 
+        class='image-thumbnail-modal-selected' onclick='displayImageModal(1)'>
+      </li>
+      <li>
+        <img 
+        src="images/image-product-2-thumbnail.jpg" 
+        alt="" 
+        class='image-thumbnail-modal' 
+        onclick='displayImageModal(2)'>
+      </li>
+      <li>
+        <img 
+        src="images/image-product-3-thumbnail.jpg" 
+        alt="" 
+        class='image-thumbnail-modal' 
+        onclick='displayImageModal(3)'>
+      </li>
+      <li>
+        <img 
+        src="images/image-product-4-thumbnail.jpg" 
+        alt="" 
+        class='image-thumbnail-modal' 
+        onclick='displayImageModal(4)'>
+      </li>
     </ul>
     
   </div>

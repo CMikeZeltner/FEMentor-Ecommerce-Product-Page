@@ -19,14 +19,9 @@ window.onload = function() {
 
     //If the window is resized, the nav bar is hidden.
     //Should come back to this later
-    if(window.innerWidth >= 769){
-        document.getElementById('nav-tag-container').style.display = 'flex'
-        document.getElementById('transparent-background')
-
-    } else {
-        document.getElementById('nav-tag-container').style.display = 'none'
-        document.getElementById('transparent-background').style.display = 'none'
-    }
+    document.getElementById('nav-tag-container').style.display = 'none'
+    document.getElementById('transparent-background').style.display = 'none'
+    
   })
 
   window.addEventListener('resize', () =>{
@@ -248,7 +243,7 @@ function deleteItem(id){
 const item = document.getElementById(id)
 item.remove()
 
-const containerEmpty = document.getElementById('item-container')
+const containerEmpty = document.getElementById('cart-item-container')
 if(containerEmpty.childNodes.length === 0){
     document.getElementById('cart-empty').style.display = 'block'
     document.getElementById('checkout-button').style.display = 'none'
