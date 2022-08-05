@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
   <script src="scripts.js"></script>
+  <script src="imageModalScripts.js"></script>
+  <script src="cartScripts.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,7 +101,8 @@
         <li>
           <img 
           src="images/image-product-1.jpg" 
-          alt="Professional photo of sneakers 1" class='image-full'>
+          alt="Professional photo of sneakers 1" 
+          class='image-full-selected'>
         </li>
         <li>
           <img 
@@ -127,28 +130,28 @@
           src='images/image-product-1-thumbnail.jpg'
           alt='thumbnail of image 1' 
           class='image-thumbnail-selected' 
-          onclick='displayImage(1)'>
+          onclick='displayThumbnailImage(1)'>
         </li>
         <li>
           <img 
           src="images/image-product-2-thumbnail.jpg" 
           alt="thumbnail of image 2" 
           class='image-thumbnail' 
-          onclick='displayImage(2)'>
+          onclick='displayThumbnailImage(2)'>
         </li>
         <li>
           <img 
           src="images/image-product-3-thumbnail.jpg" 
           alt="thumbnail of image 3" 
           class='image-thumbnail' 
-          onclick='displayImage(3)'>
+          onclick='displayThumbnailImage(3)'>
         </li>
         <li>
           <img 
           src="images/image-product-4-thumbnail.jpg" 
           alt="thumbnail of image 4" 
           class='image-thumbnail' 
-          onclick='displayImage(4)'>
+          onclick='displayThumbnailImage(4)'>
         </li>
       </ul>
       
@@ -237,7 +240,7 @@
           <img 
           src="images/image-product-1.jpg" 
           alt="" 
-          class='image-full-modal'>
+          class='image-full-modal-selected'>
         </li>
         <li>
           <img 
@@ -265,28 +268,28 @@
         <img 
         src="images/image-product-1-thumbnail.jpg" 
         alt="" 
-        class='image-thumbnail-modal-selected' onclick='displayImageModal(1)'>
+        class='image-thumbnail-modal-selected' onclick='displayThumbnailImageModal(1)'>
       </li>
       <li>
         <img 
         src="images/image-product-2-thumbnail.jpg" 
         alt="" 
         class='image-thumbnail-modal' 
-        onclick='displayImageModal(2)'>
+        onclick='displayThumbnailImageModal(2)'>
       </li>
       <li>
         <img 
         src="images/image-product-3-thumbnail.jpg" 
         alt="" 
         class='image-thumbnail-modal' 
-        onclick='displayImageModal(3)'>
+        onclick='displayThumbnailImageModal(3)'>
       </li>
       <li>
         <img 
         src="images/image-product-4-thumbnail.jpg" 
         alt="" 
         class='image-thumbnail-modal' 
-        onclick='displayImageModal(4)'>
+        onclick='displayThumbnailImageModal(4)'>
       </li>
     </ul>
     

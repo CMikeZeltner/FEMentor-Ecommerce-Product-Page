@@ -71,7 +71,7 @@ header {
 	padding-left: 1.1rem;
 	width: 270px;
 	background-color: white;
-	z-index: 10;
+	z-index: 16;
 }
 
 #nav-container {
@@ -97,7 +97,7 @@ header {
 
 #transparent-background {
 	background-color: rgba(0, 0, 0, .7);
-	z-index: 9;
+	z-index: 15;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -188,10 +188,14 @@ header {
 	pointer-events: none;
 }
 
-.image-full {
+.image-full, .image-full-selected {
 	width: 100%;
 	width: 375px;
 	height: 300px;
+}
+
+.image-full-selected{
+	display: initial;
 }
 
 
@@ -425,9 +429,9 @@ button > img {
 }
 
 #cart-empty {
-	width: 90%;
+	width: 100%;
 	text-align: center;
-	padding: 3.5rem 0;
+	padding: 3rem 0;
 	font-weight: 700;
 	color: hsl(220, 14%, 75%);
 }
@@ -482,7 +486,7 @@ button > img {
 		display: flex;
 		width: 100%;
 		margin-bottom: 4px;
-		
+		z-index: 1
 	}
 
 	#nav-container{
@@ -550,11 +554,15 @@ button > img {
 	}
 
 	
-	.image-full{
+	.image-full, .image-full-selected{
 		height: 80%;
 		border-radius: 15px;
 		margin-bottom: 2rem;
 		display: none;
+	}
+
+	.image-full-selected{
+		display: initial;
 	}
 	
 
@@ -690,7 +698,7 @@ button > img {
 		margin-bottom: 1rem;
 		font-size: 35px;
 		font-weight: 400;
-		z-index: 10;
+		z-index: 11;
 		color: white;
 	}
 
@@ -699,12 +707,15 @@ button > img {
 	}
 
 
-	.image-full-modal{
+	.image-full-modal, .image-full-modal-selected{
 		display: none;
 		width: 500px;
 		height: 500px;
 		border-radius: 15px;
-		
+	}
+
+	.image-full-modal-selected{
+		display: initial;
 	}
 
 	#image-full-container{
