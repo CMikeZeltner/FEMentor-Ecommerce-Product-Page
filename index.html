@@ -78,21 +78,27 @@
     <div id='image-carousel'>
 
       <div id='nav-wrapper'>
-        <div class='carousel-nav' id='prev' onclick='prevNextMobile(-1)'>
+        <div 
+        class='carousel-nav' 
+        id='prev' 
+        onclick='prevNextMobile(-1)'
+        role='button'
+        tabindex='0'>
           <img 
           src="images/icon-previous.svg" 
           class='nav-icon' 
-          alt="left facing arrow"
-          role='button'
-          tabindex='0'>
+          alt="left facing arrow">
         </div>
-        <div class='carousel-nav' id='next' onclick='prevNextMobile(1)'>
+        <div 
+        class='carousel-nav' 
+        id='next' 
+        onclick='prevNextMobile(1)'
+        role='button'
+        tabindex='0'>
           <img 
           src="images/icon-next.svg" 
           class='nav-icon' 
-          alt="right facing arrow"
-          role='button'
-          tabindex='0'>
+          alt="right facing arrow">
         </div>
       </div>
       <ul id='image-full-container' onclick='openImageModal()'>
@@ -225,10 +231,10 @@
       <span id='image-modal-close' onclick='closeModal()'>&times;</span>
       <div id='modal-nav-wrapper'>
         <div class='carousel-nav-modal' id='prev-modal' onclick='prevNextModal(-1)'>
-          <img src="images/icon-previous.svg" class='nav-icon-modal' alt="">
+          <img src="images/icon-previous.svg" class='nav-icon-modal' alt="left facing arrow">
         </div>
         <div class='carousel-nav-modal' id='next-modal' onclick='prevNextModal(1)'>
-          <img src="images/icon-next.svg" class='nav-icon-modal' alt="">
+          <img src="images/icon-next.svg" class='nav-icon-modal' alt="right facing arrow">
         </div>
       </div>
       <ul id='image-full-container-modal'>
