@@ -19,8 +19,14 @@ window.onload = function() {
 
     //If the window is resized, the nav bar is hidden.
     //Should come back to this later
-    document.getElementById('nav-tag-container').style.display = 'none'
-    document.getElementById('transparent-background').style.display = 'none'
+    if(window.innerWidth <= 769 ){
+        document.getElementById('nav-tag-container').style.display = 'none'
+        document.getElementById('nav-tag-container').style.position = 'absolute'
+        document.getElementById('transparent-background').style.display = 'none'
+    } else {
+        document.getElementById('nav-tag-container').style.display = 'flex'
+        document.getElementById('nav-tag-container').style.position = 'static'
+    }
     
   })
 
@@ -38,6 +44,8 @@ window.onload = function() {
 }
 
 function openImageModal() {
+    //Hide the cart modal if it's open
+    //document.getElementById('cart-modal').style.display = 'none'
     document.getElementById('image-carousel-modal').style.display = 'flex'
     document.querySelector('.image-full-modal').style.display = 'initial'
 }

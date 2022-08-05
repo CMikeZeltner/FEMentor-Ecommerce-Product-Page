@@ -363,7 +363,7 @@ button > img {
 	left: -270px;
 	min-height: 200px;
 	box-shadow: 5px 10px 25px -5px hsl(0, 0%, 0%, 25%);
-	z-index: 11;
+	z-index: 9;
 }
 
 #cart-header > h2 {
@@ -421,10 +421,11 @@ button > img {
 
 #checkout-button {
 	width: 100%;
-	margin: 1.5rem auto 1.5rem auto;
+	margin: 1rem auto 1.5rem auto;
 }
 
 #cart-empty {
+	width: 90%;
 	text-align: center;
 	padding: 3.5rem 0;
 	font-weight: 700;
@@ -534,6 +535,10 @@ button > img {
 		transform: none;
 	}
 
+	::-webkit-scrollbar{
+		width: 0;
+	}
+
 	.item-name{
 		width: auto;
 	}
@@ -575,7 +580,7 @@ button > img {
 	}
 
 	.image-thumbnail-selected, .image-thumbnail-modal-selected{
-		
+		align-self: center;
 		display: initial;
 		height: 74px;
 		width: 74px;
@@ -642,7 +647,7 @@ button > img {
 		position: absolute;
 		width: 100vw;
 		height: 100vh;
-		z-index: 10;
+		z-index: 11;
 		background-color: rgba(0, 0, 0, .7);
 		top: 0;
 		bottom: 0;
@@ -709,8 +714,8 @@ button > img {
 	#image-thumbnail-container-modal{
 		display: flex;
 		flex-direction: row;
-		width: 50%;
-		justify-content: space-around;
+		width: 500px;
+		justify-content: space-between;
 		margin-top: 2rem;
 	}
 
