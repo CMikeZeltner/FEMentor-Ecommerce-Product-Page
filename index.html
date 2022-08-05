@@ -17,14 +17,27 @@
 
 </head>
 <body>
-
-
   <header>
-    <div id='logo-links'>
-      <img src="/images/icon-menu.svg" alt="" id='accordion' onClick='toggleMenu()'>
-      <img src="/images/logo.svg" alt="" id='logo'>
+    <div id='logo-nav-container'>
+      <img 
+      src="/images/icon-menu.svg" 
+      alt=" button to open navigation menu" 
+      id='accordion' 
+      onClick='toggleMenu()'
+      role='button'
+      tabindex='0'>
+      <img 
+      src="/images/logo.svg" 
+      alt="Sneakers logo" 
+      id='logo'>
       <div id='nav-tag-container'>
-        <img src="images/icon-close.svg" alt="" id='close-button' onClick='toggleMenu()'>
+        <img 
+        src="images/icon-close.svg" 
+        alt="button to close navigation menu" 
+        id='close-button' 
+        onClick='toggleMenu()'
+        role='button'
+        tabindex='0'>
         <nav id='nav-container'>
           <a href='#' class='nav-links'>Collections</a>
           <a href='#' class='nav-links'>Men</a>
@@ -32,119 +45,199 @@
           <a href='#' class='nav-links'>About</a>
           <a href='#' class='nav-links'>Contact</a>
         </nav>
-    </div>
-
+      </div>
     </div>
 
     <div id='cart-prof-pic'>
       <div id='cart-icon-quantity-container'>
-        <img src="images/icon-cart.svg" alt="" id='cart-icon' onClick='toggleModal()'>
-        <span id='cart-quantity' onClick='toggleModal()''></span>
+        <img 
+        src="images/icon-cart.svg" 
+        alt="button to toggle shopping cart" 
+        id='cart-icon' 
+        onClick='toggleCartModal()'
+        role='button'
+        tabindex='0'>
+        <span id='cart-quantity' onClick='toggleCartModal()'></span>
 
-        <div id='modal' class='cart-modal'>
-          <div id='modal-title'><h2>Cart</h2></div>
-          <div id='item-container'></div>
+        <div id='cart-modal' >
+          <div id='cart-header'><h2>Cart</h2></div>
+          <div id='cart-item-container'></div>
           <div id='cart-empty'>Your cart is empty.</div>
           <button id='checkout-button'>Checkout</button>
         </div>
 
       </div>
-      <img src="images/image-avatar.png" alt="" id='profile-pic'>
+      <img 
+      src="images/image-avatar.png" 
+      alt="profile picture of a person" 
+      id='profile-pic'>
     </div>
   </header>
 
   <div id='desktop-container'>
-  <div id=carousel-container>
     <div id='image-carousel'>
-      <div class='carousel-nav' id='prev' onclick='displayImageMobile(-1)'>
+      <div class='carousel-nav' id='prev' onclick='prevNextMobile(-1)'>
         <img src="images/icon-previous.svg" class='nav-icon' alt="">
       </div>
-      <div class='carousel-nav' id='next' onclick='displayImageMobile(1)'>
-        <img src="images/icon-next.svg" class='nav-icon' alt="">
-      </div>
+
       <ul id='image-full-container' onclick='openImageModal()'>
-        <li><img src="images/image-product-1.jpg" alt="" class='image-full'></li>
-        <li><img src="images/image-product-2.jpg" alt="" class='image-full'></li>
-        <li><img src="images/image-product-3.jpg" alt="" class='image-full'></li>
-        <li><img src="images/image-product-4.jpg" alt="" class='image-full'></li>
+        <li>
+          <img 
+          src="images/image-product-1.jpg" 
+          alt="Professional photo of sneakers 1" class='image-full'>
+        </li>
+        <li>
+          <img 
+          src="images/image-product-2.jpg" 
+          alt="Professional photo of sneakers 2" 
+          class='image-full'>
+        </li>
+        <li>
+          <img 
+          src="images/image-product-3.jpg" 
+          alt="Professional photo of sneakers 3" 
+          class='image-full'>
+        </li>
+        <li>
+          <img 
+          src="images/image-product-4.jpg" 
+          alt="Professional photo of sneakers 4" 
+          class='image-full'>
+        </li>
       </ul>
+      <div class='carousel-nav' id='next' onclick='prevNextMobile(1)'>
+        <img 
+        src="images/icon-next.svg" 
+        class='nav-icon' 
+        alt=""
+        role='button'
+        tabindex='0'>
+      </div>
 
       <ul id='image-thumbnail-container'>
-        <li><img src="images/image-product-1-thumbnail.jpg" alt="" class='image-thumbnail-selected' onclick='displayImage(1)'></li>
-        <li><img src="images/image-product-2-thumbnail.jpg" alt="" class='image-thumbnail' onclick='displayImage(2)'></li>
-        <li><img src="images/image-product-3-thumbnail.jpg" alt="" class='image-thumbnail' onclick='displayImage(3)'></li>
-        <li><img src="images/image-product-4-thumbnail.jpg" alt="" class='image-thumbnail' onclick='displayImage(4)'></li>
+        <li>
+          <img 
+          src='images/image-product-1-thumbnail.jpg'
+          alt='thumbnail of image 1' 
+          class='image-thumbnail-selected' 
+          onclick='displayImage(1)'>
+        </li>
+        <li>
+          <img 
+          src="images/image-product-2-thumbnail.jpg" 
+          alt="thumbnail of image 2" 
+          class='image-thumbnail' 
+          onclick='displayImage(2)'>
+        </li>
+        <li>
+          <img 
+          src="images/image-product-3-thumbnail.jpg" 
+          alt="thumbnail of image 3" 
+          class='image-thumbnail' 
+          onclick='displayImage(3)'>
+        </li>
+        <li>
+          <img 
+          src="images/image-product-4-thumbnail.jpg" 
+          alt="thumbnail of image 4" 
+          class='image-thumbnail' 
+          onclick='displayImage(4)'>
+        </li>
       </ul>
       
     </div>
-  </div>
 
 
-  <main>
+    <main>
 
-  <span id='company-name'>Sneaker Company</span> 
+      <span id='company-name'>Sneaker Company</span> 
 
-  <h1>Fall Limited Edition Sneakers</h1>
+      <h1>Fall Limited Edition Sneakers</h1>
 
-  <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.</p> 
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.</p> 
 
-  <div id='price'>
-    <div id='sale-percent-container'>
-      <span id='sale-price'>$<span>125.00</span></span>
-    <div id='percent-container'>
-      <span id='sale-percent'>50%</span> 
-    </div>
-    </div>
-    <span id='retail-price'>$250.00</span> 
-  </div>
-
-  <div id='desktop-quantity-button-container'>
-
-    <div id='purchase-quantity'>
-      <div id='decrement' class='inc-dec'  onClick='handleQuantity(-1)'>
-        <img src="images/icon-minus.svg" alt="">
+      <div id='price'>
+        <div id='sale-percent-container'>
+          <span id='sale-price'>$<span>125.00</span></span>
+          <div id='percent-container'>
+            <span id='sale-percent'>50%</span> 
+          </div>
+        </div>
+        <span id='retail-price'>$250.00</span> 
       </div>
-      <div id='quantity'>0</div>
-      <div id='increment' class='inc-dec' onClick='handleQuantity(1)'>
-        <img src="images/icon-plus.svg" alt="">
+
+      <div id='desktop-quantity-button-container'>
+
+        <div id='purchase-quantity'>
+
+          <div 
+          id='decrement' 
+          class='inc-dec'  
+          onClick='handleQuantity(-1)'>
+            <img 
+            src="images/icon-minus.svg" 
+            alt="minus sign"
+            role='button'
+            tabindex='0'>
+          </div>
+          
+          <div id='quantity'>0</div>
+
+          <div 
+          id='increment' 
+          class='inc-dec' 
+          onClick='handleQuantity(1)'
+          role='button'
+          tabindex='0'>
+            <img 
+            src="images/icon-plus.svg" 
+            alt="plus sign"
+            role='button'
+            tabindex='0'>
+          </div>
+        </div>
+
+
+        <div id='button-center'>
+          <button 
+          onClick='addToCart()' 
+          id='add-to-cart-button' 
+          disabled>
+            <img 
+            src="images/icon-cart.svg" 
+            alt=""> 
+            <span id='add-to-cart'>Add to cart</span></button>
+        </div>
       </div>
-    </div>
-
-
-  <div class='center'>
-    <button onClick='addToCart()' id='add-to-cart-button' disabled><img src="images/icon-cart.svg" alt=""> <span id='add-to-cart'>Add to cart</span></button>
-  </div>
-</div>
   </main>
-
-</div>
-
-<div id='image-carousel-modal'>
-  <span id='image-modal-close' onclick='closeModal()'>&times;</span>
-  <div id='image-carousel-nav-img-wrapper'>
-    <div class='carousel-nav-modal' id='prev-modal' onclick='prevNextModal(-1)'>
-      <img src="images/icon-previous.svg" class='nav-icon-modal' alt="">
-    </div>
-    <div class='carousel-nav-modal' id='next-modal' onclick='prevNextModal(1)'>
-      <img src="images/icon-next.svg" class='nav-icon-modal' alt="">
-    </div>
-
-    <ul id='image-full-container-modal'>
-      <li><img src="images/image-product-1.jpg" alt="" class='image-full-modal'></li>
-      <li><img src="images/image-product-2.jpg" alt="" class='image-full-modal'></li>
-      <li><img src="images/image-product-3.jpg" alt="" class='image-full-modal'></li>
-      <li><img src="images/image-product-4.jpg" alt="" class='image-full-modal'></li>
-    </ul>
   </div>
-  <ul id='image-thumbnail-container-modal'>
-    <li><img src="images/image-product-1-thumbnail.jpg" alt="" class='image-thumbnail-modal-selected' onclick='displayImageModal(1)'></li>
-    <li><img src="images/image-product-2-thumbnail.jpg" alt="" class='image-thumbnail-modal' onclick='displayImageModal(2)'></li>
-    <li><img src="images/image-product-3-thumbnail.jpg" alt="" class='image-thumbnail-modal' onclick='displayImageModal(3)'></li>
-    <li><img src="images/image-product-4-thumbnail.jpg" alt="" class='image-thumbnail-modal' onclick='displayImageModal(4)'></li>
-  </ul>
-  
-</div>
+
+  <div id='image-carousel-modal'>
+    <span id='image-modal-close' onclick='closeModal()'>&times;</span>
+    <div id='image-carousel-nav-img-wrapper'>
+      <div class='carousel-nav-modal' id='prev-modal' onclick='prevNextModal(-1)'>
+        <img src="images/icon-previous.svg" class='nav-icon-modal' alt="">
+      </div>
+      <div class='carousel-nav-modal' id='next-modal' onclick='prevNextModal(1)'>
+        <img src="images/icon-next.svg" class='nav-icon-modal' alt="">
+      </div>
+
+      <ul id='image-full-container-modal'>
+        <li><img src="images/image-product-1.jpg" alt="" class='image-full-modal'></li>
+        <li><img src="images/image-product-2.jpg" alt="" class='image-full-modal'></li>
+        <li><img src="images/image-product-3.jpg" alt="" class='image-full-modal'></li>
+        <li><img src="images/image-product-4.jpg" alt="" class='image-full-modal'></li>
+      </ul>
+    </div>
+    <ul id='image-thumbnail-container-modal'>
+      <li><img src="images/image-product-1-thumbnail.jpg" alt="" class='image-thumbnail-modal-selected' onclick='displayImageModal(1)'></li>
+      <li><img src="images/image-product-2-thumbnail.jpg" alt="" class='image-thumbnail-modal' onclick='displayImageModal(2)'></li>
+      <li><img src="images/image-product-3-thumbnail.jpg" alt="" class='image-thumbnail-modal' onclick='displayImageModal(3)'></li>
+      <li><img src="images/image-product-4-thumbnail.jpg" alt="" class='image-thumbnail-modal' onclick='displayImageModal(4)'></li>
+    </ul>
+    
+  </div>
 
 
   <div class="attribution">

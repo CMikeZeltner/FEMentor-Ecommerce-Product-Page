@@ -65,7 +65,7 @@ function displayImage(index){
 }
 
 //Slightly different on mobile
-function displayImageMobile(direction){
+function prevNextMobile(direction){
     //Displays selected image, hides previous
     const images = document.querySelectorAll('.image-full')
     let i = 0
@@ -97,24 +97,7 @@ function displayImageMobile(direction){
     }
 }
 
-//Changes image and thumbnail when clicked
-function displayImageModal(index){
-    //Displays selected image, hides previous
-    const images = document.querySelectorAll('.image-full-modal')
-    images.forEach(image => {
-        image.style.display = 'none'
-    })
-    images[index - 1].style.display = 'initial'
-
-    //Applies selected class to the selected thumbnail
-    const thumbnails = document.querySelectorAll('.image-thumbnail-modal-selected, .image-thumbnail-modal')
-    thumbnails.forEach(thumbnail => {
-        thumbnail.className = 'image-thumbnail-modal'
-    })
-    thumbnails[index - 1].className = 'image-thumbnail-modal-selected'
-}
-
-//Slightly different on mobile
+//Previous and next button functionality for image modal
 function prevNextModal(direction){
     //Displays selected image, hides previous
     const images = document.querySelectorAll('.image-full-modal')
@@ -147,6 +130,25 @@ function prevNextModal(direction){
     }
 }
 
+//Changes image and thumbnail when clicked
+function displayImageModal(index){
+    //Displays selected image, hides previous
+    const images = document.querySelectorAll('.image-full-modal')
+    images.forEach(image => {
+        image.style.display = 'none'
+    })
+    images[index - 1].style.display = 'initial'
+
+    //Applies selected class to the selected thumbnail
+    const thumbnails = document.querySelectorAll('.image-thumbnail-modal-selected, .image-thumbnail-modal')
+    thumbnails.forEach(thumbnail => {
+        thumbnail.className = 'image-thumbnail-modal'
+    })
+    thumbnails[index - 1].className = 'image-thumbnail-modal-selected'
+}
+
+
+
 function closeModal(){
     document.getElementById('image-carousel-modal').style.display = 'none'
 }
@@ -175,12 +177,12 @@ document.getElementById('quantity').innerHTML = num
 }
 
 
-function toggleModal() {
-const modal = document.getElementById('modal')
-if(document.getElementById('modal').style.display === 'block'){
-    document.getElementById('modal').style.display = 'none'
+function toggleCartModal() {
+const modal = document.getElementById('cart-modal')
+if(document.getElementById('cart-modal').style.display === 'block'){
+    document.getElementById('cart-modal').style.display = 'none'
 } else{
-    document.getElementById('modal').style.display = 'block'
+    document.getElementById('cart-modal').style.display = 'block'
 }
 }
 
@@ -188,7 +190,7 @@ if(document.getElementById('modal').style.display === 'block'){
 function addToCart(){
 createCartEntry()
 
-const modal = document.getElementById('modal')
+const modal = document.getElementById('cart-modal')
 
 //Show "Checkout" button if this is the first cart item added
 document.getElementById('checkout-button').style.display = 'block'
@@ -197,7 +199,7 @@ document.getElementById('checkout-button').style.display = 'block'
 
 
 function createCartEntry() {
-const modal = document.getElementById('item-container')
+const modal = document.getElementById('cart-item-container')
 
 //Get Price and Product info for template literals
 const quantity = parseInt(document.getElementById('quantity').innerHTML)
